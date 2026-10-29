@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+ using namespace std;
+ int main(){
+ int N ;
+ long long M ;
+ cin >> N >> M ;
+
+ long long F1 = 0 , F2 = 1 ;
+  for ( int i = 1 ; i<=N ; i++ ){
+
+    cout << F1 % M ;
+    if ( i < N) cout << " " ;
+     long long F3 = (F1 + F2) % M ;
+       
+       F1 = F2 ;
+       F2 = F3;
+  }
+return  0 ;
+ }
